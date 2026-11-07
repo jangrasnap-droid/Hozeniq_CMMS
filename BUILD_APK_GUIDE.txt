@@ -23,3 +23,9 @@ use the same signing key.
 This Android app stores CMMS data locally on each phone. Different phones do not
 automatically share machine, breakdown, or work-order data. Multi-user/shared
 data needs a central server and authentication setup.
+
+## Troubleshooting notes
+- Do not paste terminal commands into `themes.xml`, `colors.xml`, `strings.xml`, or other source files. Run commands only in the VS Code Terminal.
+- If `themes.xml` was accidentally overwritten, restore it from `app/src/main/res/values/themes.xml` in the clean project archive.
+- Use JDK 17, Android SDK Platform 34, and Gradle 8.7 for this project configuration.
+- If Gradle sync/build fails, copy the complete first error block from the Build output; the final generic failure line is not enough to diagnose it.

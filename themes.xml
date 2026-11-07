@@ -3,3 +3,13 @@
         <item name="android:statusBarColor">#1E3A8A</item>
     </style>
 </resources>
+for f in settings.gradle.kts build.gradle.kts gradle.properties AndroidManifest.xml; do
+  echo "========== $f =========="
+  sed -n '1,120p' "$f"
+done
+
+echo "========== MAIN ACTIVITY =========="
+head -n 8 MainActivity.kt
+
+echo "========== WORKFLOWS =========="
+find .github -type f
