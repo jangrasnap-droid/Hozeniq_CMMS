@@ -1,0 +1,25 @@
+# HOZENIQ CMMS Android APK project
+
+## Build a test APK (Windows)
+
+1. Install Android Studio (current stable) from https://developer.android.com/studio
+2. Extract this ZIP.
+3. In Android Studio choose **Open** and select the `CMMS_Android` folder.
+4. Allow Gradle sync and install any requested Android SDK Platform 34 / Build Tools.
+5. Select **Build > Build Bundle(s) / APK(s) > Build APK(s)**.
+6. When the build finishes, click **locate**. The debug APK is:
+   `app/build/outputs/apk/debug/app-debug.apk`
+
+## Install on your phone
+Transfer `app-debug.apk` to your Android phone, open it, and allow installation from that source when Android asks.
+
+## For sharing with customers
+Do not distribute the debug APK. In Android Studio select
+**Build > Generate Signed Bundle / APK > APK**, create a signing key, and build
+a signed release APK. Keep the keystore and password safe; future updates must
+use the same signing key.
+
+## Important operating note
+This Android app stores CMMS data locally on each phone. Different phones do not
+automatically share machine, breakdown, or work-order data. Multi-user/shared
+data needs a central server and authentication setup.
